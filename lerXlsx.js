@@ -2,10 +2,10 @@ const XLSX = require("xlsx");
 
 const arquivoXLSX = XLSX.readFile("rela_insc_homologadas-2.xlsx");
 
-const arquivo = arquivoXLSX.SheetNames[0];
-const arquivoConvertido = arquivoXLSX.Sheets[arquivo];
+const planilhaDoExcel = arquivoXLSX.SheetNames[0];
+const DadosDaPlanilha = arquivoXLSX.Sheets[arquivo];
 
-const dados = XLSX.utils.sheet_to_json(arquivoConvertido);
+const dados = XLSX.utils.sheet_to_json(DadosDaPlanilha);
 
 const cursoOpcoes = {
     opcaoA: "ENGENHARIA ELETRÔNICA",
